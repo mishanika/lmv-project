@@ -1,0 +1,200 @@
+.classic-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 100px 0;
+  background: #ededf6;
+}
+.first-section-text {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+.first-section-title {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  font-weight: 700;
+  color: #242239;
+}
+.first-section-img {
+  height: 500px;
+  border-radius: 1rem;
+}
+.first-section-btn {
+  padding: 12px 24px;
+  background: #47268d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 25px 0 0 0;
+}
+// sec
+.second-section {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+.second-section-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+.second-section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #242239;
+}
+.continents {
+  display: flex;
+  gap: 25px;
+}
+.continent {
+  font-size: 0.9rem;
+  padding: 15px 15px;
+  border-radius: 25px;
+  box-shadow: 0px 3px 12px rgb(33 10 83 / 6%);
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.continent:hover {
+  background: #ebeaff;
+  color: #47268d;
+}
+.second-section-btn {
+  width: fit-content;
+  padding: 12px 24px;
+  background: #47268d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 25px 0 0 0;
+}
+// third
+.third-section {
+  width: 100%;
+  padding: 100px 0;
+  background: #242239;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  color: #fff;
+}
+.third-section-img {
+  background-image: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/classic_reasons_japan.jpg");
+  width: 650px;
+  height: 520px;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.third-section-text {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+.third-section-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.third-section-description {
+  display: flex;
+  flex-wrap: wrap;
+}
+.third-section-item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 25px 25px 0;
+}
+.third-section-item span:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+// fourth
+.fourth-section {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.fourth-section-text {
+  padding: 0 0 0 20px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #242239;
+}
+.fourth-section-text span:first-child {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.fourth-section-text span:last-child {
+  font-size: 1.05rem;
+}
+.other-tours {
+  overflow: hidden;
+  display: flex;
+  width: 1200px;
+  gap: 25px;
+}
+.fourth-section-item {
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fourth-section-item-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.fourth-section-item-description {
+  font-size: 0.9rem;
+}
+.fourth-section-item-img {
+  width: 280px;
+}
+.other-tours-wrapper {
+  display: flex;
+  align-items: center;
+}
+.slider {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/rightwhite.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  right: -20px;
+  background-color: #513394;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.left {
+  transform: rotate(180deg);
+  margin: 0 -20px 0 0;
+}
+.right {
+  margin: 0 0 0 -25px;
+}

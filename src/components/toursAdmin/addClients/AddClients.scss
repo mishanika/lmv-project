@@ -1,0 +1,142 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.veil {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #000;
+  opacity: 0.3;
+}
+.basketOrBooked-wrapper {
+  overflow-y: scroll;
+  position: fixed;
+  min-width: 1100px;
+  min-height: 650px;
+  max-height: 700px;
+  background: rgb(255, 255, 255);
+  border: 1px solid #e2e2ee;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  box-sizing: border-box;
+
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+
+  .tour-item {
+    justify-content: center;
+  }
+}
+.client-main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-inner-wrapper {
+  width: 1400px;
+  display: flex;
+  gap: 75px;
+}
+.add-client-wrapper {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  input {
+    border-radius: 0.5rem;
+    border: 1px solid #8f8f8f;
+
+    padding: 5px 0;
+  }
+}
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  color: #fff;
+  background: #47268d;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  font-size: 1.5rem;
+
+  &:hover {
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.clients {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.client {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img {
+    height: 75px;
+    border-radius: 50%;
+  }
+}
+.client-upper-part {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.client-data {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.client-tour-data {
+  display: flex;
+  gap: 10px;
+  span {
+    font-size: 1rem;
+    height: 40px;
+  }
+  .client-basket {
+    width: fit-content;
+    padding: 0 5px;
+  }
+  .client-bookedTours {
+    width: fit-content;
+    padding: 0 5px;
+  }
+}

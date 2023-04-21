@@ -1,0 +1,65 @@
+.footer {
+  width: 100%;
+  height: 400px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.footer-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+}
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-upper-text {
+  color: #999999;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.footer-lower-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  gap: 10px;
+}
+.footer-lower-text > div {
+  cursor: pointer;
+}
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.tel {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+.socials {
+  display: flex;
+  width: 240px;
+  height: 35px;
+}
+.socials a {
+  display: block;
+  width: 40px;
+  height: 50px;
+  background: url("https://media.gadventures.com/media-server/static/gadventures/images/social-footer-sprite-gry.png?90f3cdeb9171")
+    no-repeat;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.socials a:hover {
+  opacity: 1;
+}

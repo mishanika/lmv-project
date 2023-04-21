@@ -1,0 +1,128 @@
+.search-main {
+  margin: 100px 0 0 0;
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  padding: 50px 100px 50px 50px;
+  box-sizing: border-box;
+}
+.search-side-panel {
+  width: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .search-tour-date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  & > div:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0;
+    border-top: 1px solid #e2e2ee;
+  }
+  & > div > span {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+.search-tour-date div {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 5px rgba(71, 38, 141, 0.1), 0px 2px 3px rgba(163, 147, 198, 0.2);
+}
+.item {
+  display: flex;
+  gap: 5px;
+}
+.search-tours {
+  width: calc(100% - 400px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+.tour-item {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: 350px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
+
+.tour-item-description {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 10px;
+  gap: 10px;
+  box-sizing: border-box;
+  border: 1px solid #8f8f8f;
+}
+.tour-item-description-upper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .tour-style {
+    color: #8f8f8f;
+    font-size: 0.9rem;
+  }
+  .search-tour-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .tour-duration {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+  .tour-destination {
+    font-weight: normal;
+  }
+}
+.tour-item-description-lower {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .tour-cost {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #47268d;
+  }
+  .date-cost-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.add-to-cart {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background: #47268d;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+
+  &:hover {
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.22);
+  }
+}

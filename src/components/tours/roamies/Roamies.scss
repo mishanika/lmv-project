@@ -1,0 +1,481 @@
+@use "sass:list";
+
+.roamies-main {
+  margin: 75px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.roamies-first-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 100px 0;
+  box-sizing: border-box;
+  background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesheaderarrowbg.png");
+  background-color: #1ad7c4;
+}
+.roamies-first-section-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+
+  .roamies-first-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .roamies-logo {
+    width: 330px;
+  }
+  .thrillOfAdventure {
+    display: block;
+    width: 330px;
+    line-height: 1.5rem;
+  }
+}
+.roamies-btn {
+  padding: 15px 20px;
+  font-weight: 800;
+  background: #bffd58;
+  border-radius: 1rem;
+  border: 2px solid black;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 0px rgb(0 0 0 / 31%);
+}
+.roamies-btn:hover {
+  background: #ffd5d3;
+}
+a {
+  width: fit-content;
+  color: black;
+  transition: all 0.3s;
+}
+a:hover {
+  transform: translate(-2.5%, -10%);
+}
+
+.roamies-first-section-photo {
+  flex-grow: 1;
+  height: 460px;
+  background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesheaderimage.jpg");
+  border: 6px solid #fff;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    width: 150px;
+    height: 150px;
+    margin-right: -50px;
+    margin-top: -50px;
+  }
+}
+//second
+.roamies-second-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 100px 0 100px;
+  box-sizing: border-box;
+  background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamzonesarrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.roam-zones-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.roam-zones {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #2d3047;
+}
+.roam-zones > span {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.roam-zones-continents {
+  display: flex;
+  gap: 10px;
+}
+.roamies-continent {
+  width: fit-content;
+  padding: 3px 15px 3px 5px;
+  border: 2px solid #2d3047;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  img {
+    width: 35px;
+  }
+  &:hover {
+    background: #2d3047 !important;
+    color: #fff !important;
+  }
+}
+
+// third
+.roamies-third-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0;
+  box-sizing: border-box;
+  background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesuspsarrowbg.png");
+  background-color: #ff6c6c;
+}
+.roamies-third-section-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+
+  .title {
+    margin: 0 0 -175px 0;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2d3047;
+    font-family: "Catamaran", sans-serif;
+  }
+}
+.two-photo-wrapper-upper {
+  display: flex;
+  align-items: center;
+  gap: 280px;
+  color: #2d3047;
+  line-height: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+}
+.two-photo-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+.first-img-wrapper {
+  width: 360px;
+  height: 450px;
+  border-radius: 1rem;
+  border: 6px solid #ffffff;
+
+  background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesusp1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.first-img-wrapper img {
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  bottom: -25px;
+}
+.first-img-wrapper .see-all-additional {
+  position: absolute;
+  top: -15px;
+  left: -50px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 20px 25px;
+  background: #2d3047;
+  border-radius: 1rem;
+  color: #fff;
+  white-space: nowrap;
+  font-family: "Catamaran", sans-serif;
+  box-shadow: 4px 4px 0px rgb(0 0 0 / 25%);
+  transform: rotate(-7deg);
+}
+
+.two-photo-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+
+  .first-img-wrapper {
+    width: 515px;
+    height: 350px;
+    background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesusp2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+      height: 100px;
+      position: absolute;
+      right: 10px;
+      bottom: 60px;
+      z-index: 1;
+    }
+    .more-additional {
+      position: absolute;
+      right: -30px;
+      bottom: 0px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      padding: 20px 25px;
+      background: #2d3047;
+      border-radius: 1rem;
+      color: #fff;
+      white-space: nowrap;
+      font-family: "Catamaran", sans-serif;
+      box-shadow: 4px 4px 0px rgb(0 0 0 / 25%);
+      transform: rotate(-7deg);
+    }
+  }
+}
+
+.big-photo-wrapper {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  margin: 0 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .big-photo-elements-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+
+    img {
+      width: 170px;
+      position: absolute;
+      top: 0;
+      left: -100px;
+      z-index: 1;
+    }
+    .best-hotels {
+      position: absolute;
+      top: -50px;
+      left: -150px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      padding: 20px 25px;
+      background: #2d3047;
+      border-radius: 1rem;
+      color: #fff;
+      box-shadow: 4px 4px 0px rgb(0 0 0 / 25%);
+      transform: rotate(-7deg);
+      z-index: 1;
+    }
+
+    .slider {
+      position: absolute;
+      background-color: #1ad7c4;
+      align-self: center;
+      margin: 0 50px;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      right: 0;
+    }
+  }
+
+  .big-photo-text {
+    width: 500px;
+    color: #2d3047;
+    line-height: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+  }
+}
+
+.big-photo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  border: 6px solid #ffffff;
+}
+
+.star-sign {
+  width: 180px;
+  height: 180px;
+  bottom: -80px;
+  right: 100px;
+  background-image: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/propertynamebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #2d3047;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: 0.5s all ease-in-out;
+
+  .star-title {
+    max-width: 60px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .star-description {
+    max-width: 100px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+  }
+}
+
+.big-photo-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  transition: 0.5s all ease-in-out;
+  left: 0;
+}
+
+$urls: "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel1.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel10.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel12.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel3.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel4.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel5.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel6.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel7.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel8.jpg",
+  "https://media.gadventures.com/media-server/dynamic/admin/content_pages/hostel9.jpg";
+
+@for $i from 1 through 10 {
+  .big-photo-item:nth-child(#{$i}) {
+    background: url(nth($urls, $i));
+  }
+}
+
+.two-photo-wrapper-lower {
+  display: flex;
+  align-items: center;
+  gap: 280px;
+  color: #2d3047;
+  line-height: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+
+  .first-img-wrapper {
+    background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesusp4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .two-photo-horizontal {
+    .first-img-wrapper {
+      background: url("https://media.gadventures.com/media-server/dynamic/admin/content_pages/roamiesusp5.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+// fourth
+.roamies-fourth-section {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  line-height: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  color: #2d3047;
+}
+.roamies-fourth-section-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.roamies-fourth-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+  & > span:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  & > span:last-child {
+    max-width: 650px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+}
+.roamies-tours-stories-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .slider {
+    position: absolute;
+    z-index: 1;
+    background: #1ad7c4;
+    background-image: url(https://media.gadventures.com/media-server/dynamic/admin/content_pages/rightwhite.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .left {
+    left: -15px;
+  }
+  .right {
+    right: -15px;
+  }
+}
+.other-stories {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  gap: 30px;
+}
+.tour-storie {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  img {
+    width: 300px;
+    height: 250px;
+    border-radius: 1rem;
+    border: 6px solid#1ad7c4;
+  }
+  .tour-storie-nickname {
+    font-size: 0.8rem;
+  }
+  .tour-storie-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .tour-storie-description {
+    font-size: 0.9rem;
+  }
+}

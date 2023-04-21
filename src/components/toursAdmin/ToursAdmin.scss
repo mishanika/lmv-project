@@ -1,0 +1,28 @@
+.admin-tours-main {
+  width: 100%;
+  height: 100%;
+  padding: 175px 0 100px 0;
+  display: flex;
+  justify-content: center;
+}
+.admin-tours {
+  width: calc(100% - 400px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+.edit-tour-btn {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background: #47268d;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+
+  &:hover {
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.22);
+  }
+}
