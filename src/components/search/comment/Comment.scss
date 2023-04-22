@@ -1,0 +1,9 @@
+.comment-add {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  textarea {
+    flex-grow: 1;
+    resize: none;
+  }
+}

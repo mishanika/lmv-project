@@ -5,7 +5,7 @@ export const selectSlice = createSlice({
   initialState: {
     auth: localStorage.getItem("auth") === "true" ? true : false,
     sessionId: localStorage.getItem("sessionId") !== null ? localStorage.getItem("sessionId") : null,
-    status: localStorage.getItem("member") !== null ? localStorage.getItem("member") : null,
+    status: localStorage.getItem("status") !== null ? localStorage.getItem("status") : null,
   },
   reducers: {
     update(state, action) {

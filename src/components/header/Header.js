@@ -15,7 +15,7 @@ function Header() {
     }
   }, []);
 
-  const PrivateRoute = ({ auth, children }) => {
+  const PrivateRoute = ({ auth, children, status }) => {
     if (auth === "notImportant") {
       return children;
     } else if (auth === "unAuth") {
@@ -24,44 +24,58 @@ function Header() {
       } else {
         return <Navigate to="/" />;
       }
-    } else if (auth === "auth") {
-      if (authState.auth === true && authState.status !== "member") {
-        return children;
-      } else if (authState.auth === true && authState.status === "admin") {
+    } else if (auth === "auth" && status === "member") {
+      if (authState.auth === true) {
         return children;
       } else {
         return <Navigate to="/login" />;
       }
+    } else if (auth === "auth" && status === "admin") {
+      if (authState.auth === true && authState.status === "admin") {
+        return children;
+      } else {
+        return <Navigate to="/" />;
+      }
     }
   };
 
-  const renderRoute = ({ path, component, auth }) => (
-    <Route path={path} element={<PrivateRoute auth={auth}>{component}</PrivateRoute>} key={path} />
-  );
+  const renderRoute = ({ path, component, auth, status }) => {
+    return (
+      <Route
+        path={path}
+        element={
+          <PrivateRoute auth={auth} status={status}>
+            {component}
+          </PrivateRoute>
+        }
+        key={path}
+      />
+    );
+  };
 
-  const headerRender = ({ path, name, auth }) => {
+  const headerRender = ({ path, name, auth, status }) => {
     if (authState.auth) {
-      if (!(auth === "unAuth")) {
-        //if (authState.status === "admin" ) {
-        return (
-          <Link to={path}>
-            <div className="path-block" key={name}>
-              <span className="path-name">{name}</span>
-            </div>
-          </Link>
-        );
-        //} else if (authState.status === "member") {
-        // return (
-        //   <Link to={path}>
-        //     <div className="path-block" key={name}>
-        //       <span className="path-name">{name}</span>
-        //     </div>
-        //   </Link>
-        // );
-        //}
+      if (auth !== "unAuth") {
+        if ((status === "member" || status === "admin") && authState.status === "admin") {
+          return (
+            <Link to={path}>
+              <div className="path-block" key={name}>
+                <span className="path-name">{name}</span>
+              </div>
+            </Link>
+          );
+        } else if (status === "member" && authState.status === "member") {
+          return (
+            <Link to={path}>
+              <div className="path-block" key={name}>
+                <span className="path-name">{name}</span>
+              </div>
+            </Link>
+          );
+        }
       }
     } else {
-      if (!(auth === "auth")) {
+      if (auth !== "auth") {
         return (
           <Link to={path}>
             <div className="path-block" key={name}>

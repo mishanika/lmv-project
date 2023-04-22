@@ -22,7 +22,6 @@ function AddTours({ rerender }) {
         continent: document.querySelector("#add-continent").value,
       }),
     }).then(() => {
-      console.log(rerender);
       rerender();
     });
   };

@@ -246,8 +246,8 @@ app.post("/basketOrBooked", jsonParser, function (request, response) {
     }
     tours = parsedData.tours.filter((tour) => userTours.bookedTours.includes(tour.id));
   }
-
-  response.json(tours);
+  console.log(tours.map((tour) => ({ ...tour, target: request.body.target })));
+  response.json(tours.map((tour) => ({ ...tour, target: request.body.target })));
 });
 
 app.post("/adminDelete", jsonParser, function (request, response) {
@@ -262,6 +262,30 @@ app.post("/adminDelete", jsonParser, function (request, response) {
     );
   }
   response.send("Deleted");
+  let dataToPush = JSON.stringify(parsedData);
+  fs.writeFile("db/db.json", dataToPush, (err) => {
+    if (err) throw err;
+  });
+});
+
+app.post("/comments", jsonParser, function (request, response) {
+  let data = fs.readFileSync("db/db.json");
+  let parsedData = JSON.parse(data);
+
+  if (!parsedData.tours[request.body.id].comments) {
+    parsedData.tours[request.body.id].comments = [];
+  }
+  response.json({ comments: parsedData.tours[request.body.id].comments, id: request.body.id });
+});
+app.post("/addComment", jsonParser, function (request, response) {
+  let data = fs.readFileSync("db/db.json");
+  let parsedData = JSON.parse(data);
+  if (!parsedData.tours[request.body.id].comments) {
+    parsedData.tours[request.body.id].comments = [];
+  }
+  parsedData.tours[request.body.id].comments.push({ rating: request.body.rating, comment: request.body.comment });
+  console.log(request.body);
+  response.json({ comments: parsedData.tours[request.body.id].comments, id: request.body.id });
   let dataToPush = JSON.stringify(parsedData);
   fs.writeFile("db/db.json", dataToPush, (err) => {
     if (err) throw err;

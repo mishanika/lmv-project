@@ -11,6 +11,7 @@ function AddClients() {
   const [basketOrBooked, setBasketOrBooked] = useState([]);
   const [activeId, setActiveId] = useState(0);
   const [amount, setAmount] = useState(0);
+
   const addClient = () => {
     const data = {
       name: document.querySelector("#add-name").value,
@@ -99,7 +100,7 @@ function AddClients() {
     }).then(setBasketOrBooked((prev) => prev.filter((tour) => tour.id != id)));
   };
 
-  const toursRender = ({ name, url, duration, cost, destination, style, type, date, id }) => (
+  const toursRender = ({ name, url, duration, cost, destination, style, type, date, id, target }) => (
     <div className="tour-item">
       <img src={url} className="tour-item-img" />
       <div className="tour-item-description">
@@ -118,12 +119,15 @@ function AddClients() {
           </div>
         </div>
         <div className="cart-btn">
-          <div className="delete-from-cart" id="deleteBasket" onClick={(e) => deleteFromBasketOrBooked(e, id)}>
-            Delete from cart
-          </div>
-          <div className="book" id="deleteBooked" onClick={(e) => deleteFromBasketOrBooked(e, id)}>
-            Delete booked
-          </div>
+          {target == "booked" ? (
+            <div className="book" id="deleteBooked" onClick={(e) => deleteFromBasketOrBooked(e, id)}>
+              Delete booked
+            </div>
+          ) : (
+            <div className="delete-from-cart" id="deleteBasket" onClick={(e) => deleteFromBasketOrBooked(e, id)}>
+              Delete from cart
+            </div>
+          )}
         </div>
       </div>
     </div>

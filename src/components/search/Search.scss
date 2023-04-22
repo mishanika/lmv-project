@@ -126,3 +126,32 @@
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.22);
   }
 }
+.comments-wrapper {
+  overflow-y: scroll;
+  position: fixed;
+  min-width: 1100px;
+  min-height: 650px;
+  max-height: 700px;
+  background: rgb(255, 255, 255);
+  border: 1px solid #e2e2ee;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  box-sizing: border-box;
+
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 50px;
+
+  .comment-item {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+    gap: 15px;
+  }
+}
