@@ -3,7 +3,7 @@ import "./AddTours.scss";
 
 function AddTours({ rerender }) {
   const urlPost = "http://localhost:3030/addTourAdmin";
-  console.log("rendering");
+
   const addTour = () => {
     fetch(urlPost, {
       method: "POST",

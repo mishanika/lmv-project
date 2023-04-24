@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import "./Search.scss";
 import { continents, levels, types } from "./text";
 import { styles } from "./text";
 import Comment from "./comment/Comment";
+import OwnTourSearch from "./ownTourSearch/OwnTourSearch";
 
 function Search() {
-  const dispatch = useDispatch();
   const url = "http://localhost:3030/tours";
   const urlAdd = "http://localhost:3030/addTour";
   const urlGetComments = "http://localhost:3030/comments";
@@ -98,14 +97,15 @@ function Search() {
   };
 
   const toursRender = ({ name, url, duration, cost, destination, style, type, date, id }) => (
-    <div
-      className="tour-item"
-      onClick={() => {
-        veilOnOff();
-        getComments(id);
-      }}
-    >
-      <img src={url} className="tour-item-img" />
+    <div className="tour-item">
+      <img
+        src={url}
+        className="tour-item-img"
+        onClick={() => {
+          veilOnOff();
+          getComments(id);
+        }}
+      />
       <div className="tour-item-description">
         <div className="tour-item-description-upper">
           <span className="tour-style">{style}</span>
@@ -235,7 +235,10 @@ function Search() {
             {levels.map(continentsRender)}
           </div>
         </div>
-        <div className="search-tours">{tours.map(toursRender)}</div>
+        <div className="search-tours">
+          {tours.map(toursRender)}
+          <OwnTourSearch />
+        </div>
       </main>
     </>
   );

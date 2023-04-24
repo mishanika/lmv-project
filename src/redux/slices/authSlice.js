@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const selectSlice = createSlice({
-  name: "selector",
+export const authSlice = createSlice({
+  name: "auth",
   initialState: {
     auth: localStorage.getItem("auth") === "true" ? true : false,
     sessionId: localStorage.getItem("sessionId") !== null ? localStorage.getItem("sessionId") : null,
@@ -19,7 +19,7 @@ export const selectSlice = createSlice({
   },
 });
 
-const { actions, reducer: authReducer } = selectSlice;
+const { actions, reducer: authReducer } = authSlice;
 export const { update } = actions;
 
 export default authReducer;

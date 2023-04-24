@@ -8,6 +8,7 @@ import Search from "../search/Search";
 import Basket from "../basket/Basket";
 import ToursAdmin from "../toursAdmin/ToursAdmin";
 import AddClients from "../toursAdmin/addClients/AddClients";
+import OwnTourAdmin from "../ownTourAdmin/OwnTourAdmin";
 
 export const routes = [
   {
@@ -66,7 +67,13 @@ export const routes = [
     auth: "auth",
     status: "member",
   },
-
+  {
+    path: "/ownTour",
+    name: "OwnTourAdmin",
+    component: <OwnTourAdmin />,
+    auth: "auth",
+    status: "admin",
+  },
   {
     path: "/addTours",
     name: "Add Tours",

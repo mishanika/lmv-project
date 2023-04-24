@@ -277,6 +277,7 @@ app.post("/comments", jsonParser, function (request, response) {
   }
   response.json({ comments: parsedData.tours[request.body.id].comments, id: request.body.id });
 });
+
 app.post("/addComment", jsonParser, function (request, response) {
   let data = fs.readFileSync("db/db.json");
   let parsedData = JSON.parse(data);
@@ -290,4 +291,31 @@ app.post("/addComment", jsonParser, function (request, response) {
   fs.writeFile("db/db.json", dataToPush, (err) => {
     if (err) throw err;
   });
+});
+
+app.post("/ownTour", jsonParser, function (request, response) {
+  let data = fs.readFileSync("db/db.json");
+  let parsedData = JSON.parse(data);
+
+  let user = parsedData.users.find((user) => user.sessionId == request.body.sessionId);
+  console.log(user);
+  parsedData.ownTours.push({
+    name: user.name,
+    surname: user.surname,
+    email: user.email,
+    phone: user.phone,
+    countries: request.body.countries,
+    style: request.body.style,
+    duration: request.body.duration,
+  });
+  let dataToPush = JSON.stringify(parsedData);
+  fs.writeFile("db/db.json", dataToPush, (err) => {
+    if (err) throw err;
+  });
+});
+
+app.get("/ownTourAdmin", jsonParser, function (request, response) {
+  let data = fs.readFileSync("db/db.json");
+  let parsedData = JSON.parse(data);
+  response.json(parsedData.ownTours);
 });

@@ -1,0 +1,32 @@
+.own-tour {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.place-country {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.place-property {
+  font-size: 1.1rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  input {
+    width: 100px;
+    height: 25px;
+    font-size: 1.1rem;
+    border: 1px solid black;
+  }
+}
+.own-tour-request {
+  cursor: pointer;
+}
+.add-country-input {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
